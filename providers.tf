@@ -1,28 +1,30 @@
-# Remote Backend 
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
+
+#######################################
+###### Configure the AWS Provider #####
+#######################################
+
+provider "aws" {
+  region = "us-east-2"
+}
+
+####################################################
+##### Terraform Cloud For Remote State #############
+####################################################
+
 terraform {
   cloud {
     organization = "jonasfost"
 
     workspaces {
-      name = "terraform-test-gha"
+      name = "prod-us-east-2-infrastructure"
     }
   }
-}
-
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "4.52.0"
-    }
-    random = {
-      source  = "hashicorp/random"
-      version = "3.4.3"
-    }
-  }
-  required_version = ">= 1.1.0"
-}
-
-provider "aws" {
-  region = "us-east-2"
 }
