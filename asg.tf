@@ -34,7 +34,8 @@ module "asg" {
   # image_id          = data.aws_ami.packer_ubuntu.id
   instance_type     = var.instance_type
   key_name          = var.key_pair_use2
-  user_data         = base64encode(local.user_data)
+  # user_data         = base64encode(local.user_data)
+  user_data         = local.user_data
   enable_monitoring = true
 
   create_iam_instance_profile = false
