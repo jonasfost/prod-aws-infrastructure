@@ -35,7 +35,7 @@ module "alb" {
     {
       port            = 443
       protocol        = "HTTPS"
-      certificate_arn = data.aws_acm_certificate.prod_johnyfoster_ssl_cert.arn
+      certificate_arn = data.aws_acm_certificate.johnyfoster_ssl_cert.arn
     },
   ]
 
@@ -49,7 +49,7 @@ module "alb" {
         }
       ]
       conditions = [{
-        host_headers = ["${var.environment}.johnyfoster.com", "www.${var.environment}.johnyfoster.com"]
+        host_headers = ["johnyfoster.com", "www.johnyfoster.com"]
       }]
     },
   ]

@@ -41,14 +41,14 @@ data "aws_route53_zone" "johnyfoster_zone" {
 
 # Find a certificate issued by (not imported into) ACM
 
-data "aws_acm_certificate" "johnyfoster_ssl_cert" {
-  domain      = "*.johnyfoster.com"
-  types       = ["AMAZON_ISSUED"]
-  most_recent = true
-}
+# data "aws_acm_certificate" "johnyfoster_ssl_cert" {
+#   domain      = "*.johnyfoster.com"
+#   types       = ["AMAZON_ISSUED"]
+#   most_recent = true
+# }
 
-data "aws_acm_certificate" "prod_johnyfoster_ssl_cert" {
-  domain      = "www.prod.johnyfoster.com"
+data "aws_acm_certificate" "johnyfoster_ssl_cert" {
+  domain      = "www.johnyfoster.com"
   types       = ["AMAZON_ISSUED"]
   most_recent = true
 }

@@ -2,9 +2,9 @@
 # Route53 ressource
 ################################################################################
 
-resource "aws_route53_record" "www_prod" {
+resource "aws_route53_record" "www_johnyfoster" {
   zone_id = data.aws_route53_zone.johnyfoster_zone.zone_id
-  name    = "www.${var.environment}.${data.aws_route53_zone.johnyfoster_zone.name}"
+  name    = "www.${data.aws_route53_zone.johnyfoster_zone.name}"
   type    = "A"
   # ttl     = 300
   # records = [module.alb.lb_arn]
@@ -15,9 +15,9 @@ resource "aws_route53_record" "www_prod" {
   }
 }
 
-resource "aws_route53_record" "prod" {
+resource "aws_route53_record" "johnyfoster" {
   zone_id = data.aws_route53_zone.johnyfoster_zone.zone_id
-  name    = "${var.environment}.${data.aws_route53_zone.johnyfoster_zone.name}"
+  name    = data.aws_route53_zone.johnyfoster_zone.name
   type    = "A"
   # ttl     = 300
   # records = [module.alb.lb_arn]
