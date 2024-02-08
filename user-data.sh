@@ -38,4 +38,4 @@ sudo chmod 666 /var/run/docker.sock
 # docker run -d -p 80:3000 bkimminich/juice-shop
 
 docker pull jonasfost/image-app:knote-app-v1.0.0
-docker run -d -p 80:3000 jonasfost/image-app:knote-app-v1.0.0
+docker run -d -p 80:3001 jonasfost/image-app:knote-app-v1.0.0
