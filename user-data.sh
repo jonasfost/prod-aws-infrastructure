@@ -34,5 +34,8 @@ sudo chmod 666 /var/run/docker.sock
 
 # Run OWASP Juice Shop Container
 
-docker pull bkimminich/juice-shop
-docker run -d -p 80:3000 bkimminich/juice-shop
+# docker pull bkimminich/juice-shop
+# docker run -d -p 80:3000 bkimminich/juice-shop
+
+docker pull docker pull jonasfost/image-app:knote-app-v1.0.0
+docker run -d -p 80:3000 docker pull jonasfost/image-app:knote-app-v1.0.0
