@@ -71,7 +71,7 @@ module "alb" {
         unhealthy_threshold = 2
         timeout             = 5
         protocol            = "HTTP"
-        matcher             = "200-399"
+        matcher             = "200"
       }
       protocol_version = "HTTP1"
 
